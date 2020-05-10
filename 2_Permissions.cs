@@ -9,10 +9,12 @@ $ chmod -R +x folder1
         [Files]      [Folders]
  r      Read File    ls
 
- w      Edit,Delete  Add,Delete  
+ w      Edit,Delete  Add,Delete
 
  x      Execute     cd, ls -l
 */
+
+
 # Now If we have a read permission only this is the allowed operations
 # only that you can do
 [shipmast3r@localhost Desktop]$ ls -la
@@ -24,6 +26,8 @@ dr--r--r--.  2 root root   19 May 10 20:44 dir1
 [shipmast3r@localhost Desktop]$ ls dir1/
 ls: cannot access dir1/file1: Permission denied
 file1
+
+
 # As you can see here we cannot read the details because
 # that's require execute permission x *
 [shipmast3r@localhost Desktop]$ ls -la dir1
@@ -34,9 +38,12 @@ total 0
 d????????? ? ? ? ?            ? .
 d????????? ? ? ? ?            ? ..
 -????????? ? ? ? ?            ? file1
+
+
 # Also we cannot cd into this directory that's require execute permission
 [shipmast3r@localhost Desktop]$ cd dir1/
 bash: cd: dir1/: Permission denied
+
 
 # If we have execute permission only we can cd into it
 # but cannot list the files
@@ -52,10 +59,12 @@ drwxr-xr-x.  2 root root  112 Apr 29 12:45 Metro.PerformanceTesting
 [shipmast3r@localhost Desktop]$ cd dir1/
 [shipmast3r@localhost dir1]$ ls
 ls: cannot open directory .: Permission denied
+
+
 # [!!] In this case If we have the read permission without execute permission
-# we can still execute it using bash command because it read the file 
-# then execute the text that inside it also python scripts works fine 
-# with read permission 
+# we can still execute it using bash command because it read the file
+# then execute the text that inside it also python scripts works fine
+# with read permission
 [root@localhost Desktop]# ls -la dir1/
 total 4
 d--x--x--x. 2 root root 19 May 10 20:44 .
@@ -75,5 +84,3 @@ Su Mo Tu We Th Fr Sa
 31
 [shipmast3r@localhost dir1]$ ./file1
 bash: ./file1: Permission denied
-
-
