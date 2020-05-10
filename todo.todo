@@ -1,0 +1,17 @@
+'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
+'Alt+Enter' // Triggers `Todo: Toggle Box`
+'Alt+D' // Triggers `Todo: Toggle Done`
+'Alt+C' // Triggers `Todo: Toggle Cancelled`
+'Alt+S' // Triggers `Todo: Toggle Start`
+'Cmd/Ctrl+Shift+A' // Triggers  `Todo: Archive`
+Linux Learning:
+    Users:
+        ✔ Adding User. @done(20-05-10 10:16)
+        ✔ Deleting User. @done(20-05-10 10:16)
+        ✔ Editing User. @done(20-05-10 10:16)
+    Groups:
+        ✔ Adding Member to group @done(20-05-10 10:16)
+        ✔ Changing the primary group @done(20-05-10 10:17)
+        ✔ Adding or changing secodnry group @done(20-05-10 10:17)
+    Permissions:
+        ☐ Files and dirs Permissions.
