@@ -1,3 +1,7 @@
+# =============================================================================
+# =============================== Author ======================================
+#=============================== Shipmast3r ===================================
+# =============================================================================
 # Remove the permission from U, G and O
 $ chmod -x file1
 
@@ -90,4 +94,21 @@ Su Mo Tu We Th Fr Sa
 31
 [shipmast3r@localhost dir1]$ ./file1
 bash: ./file1: Permission denied
+=============================================================================
+
+# Apply chmod on all files inside the folder recursivly
+[shipmast3r@localhost dir1]$ chmod -R go-rwx dir_name/
+
+=============================================================================
+
+# Change the owner group for a files
+[root@localhost dir1]# chown :wheel file1
+[root@localhost dir1]# ls -la
+total 4
+d--x--x--x. 2 root root  19 May 10 20:44 .
+drwxr-xr-x. 4 root root  50 May 10 11:19 ..
+-rwxr-xr--. 1 root wheel 13 May 10 20:44 file1
+
+# Change the owner user and group for a file
+[root@localhost dir1]# chown user:group file_name
 =============================================================================

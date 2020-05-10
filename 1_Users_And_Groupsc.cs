@@ -7,7 +7,7 @@ $ usermod -aG secondry_group
 #Change the primary group
 $ usermod -g group user
 
-# Change the secondry group 
+# Change the secondry group
 
 #Change the primary group for the user while creating it
 $ useradd -g primary_group username
@@ -20,3 +20,5 @@ $ userdel -r user_name
 
 // In All user commands the order is [group] [user]
 
+# Remove the secodry groups from user
+$ usermod -G "" user_name
